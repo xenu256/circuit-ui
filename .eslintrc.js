@@ -1,7 +1,17 @@
 module.exports = {
   extends: ['airbnb', 'plugin:jest/recommended', 'prettier', 'prettier/react'],
-  plugins: ['prettier', 'jest'],
+  plugins: ['prettier', 'jest', 'emotion'],
   rules: {
+    /**
+     * Emotion 10 migration rules (start)
+     */
+    "emotion/jsx-import": "error",
+    "emotion/no-vanilla": "error",
+    "emotion/import-from-emotion": "error",
+    "emotion/styled-import": "error",
+    /**
+     * Emotion 10 migration rules (end)
+     */
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'no-use-before-define': ['error', { functions: false }],
     'no-underscore-dangle': 'off',
