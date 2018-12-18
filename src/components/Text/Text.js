@@ -55,6 +55,7 @@ const marginStyles = ({ noMargin }) =>
     margin-bottom: 0;
   `;
 
+// TODO: Rewrite this whole thing using the as prop.
 const StyledText = styled(HtmlElement)`
   ${baseStyles};
   ${sizeStyles};
