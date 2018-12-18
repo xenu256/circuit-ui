@@ -1,31 +1,29 @@
-import React from 'react';
-import { css } from 'emotion';
-import { withTheme } from 'emotion-theming';
+/** @jsx jsx */
 
-import { themePropType } from '../../util/shared-prop-types';
+import styled from '@emotion/styled';
+import { css, jsx } from '@emotion/core';
+
 import { svgKilo } from '../../styles/style-helpers';
 import SvgButton from '../SvgButton';
 import Icon from './close-icon.svg';
 
-const className = ({ theme }) => css`
-  label: close-button;
-  ${svgKilo({ theme })};
-`;
+const SvgCloseButton = styled(SvgButton)(
+  ({ theme }) => css`
+    label: close-button;
+    ${svgKilo({ theme })};
+  `
+);
 
 /**
  * A generic close button.
  */
-const CloseButton = ({ theme, ...props }) => (
-  <SvgButton className={className({ theme })} {...props}>
+const CloseButton = props => (
+  <SvgCloseButton {...props}>
     <Icon />
-  </SvgButton>
+  </SvgCloseButton>
 );
-
-CloseButton.propTypes = {
-  theme: themePropType.isRequired
-};
 
 /**
  * @component
  */
-export default withTheme(CloseButton);
+export default CloseButton;
