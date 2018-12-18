@@ -4,61 +4,64 @@
       "plugins": [
         "transform-class-properties",
         "lodash",
-        "transform-object-rest-spread",
+        "transform-object-rest-spread"
+      ],
+      "presets": [
+        ["env", { "loose": true }],
+        "react",
+        "stage-3",
         [
-          "emotion",
+          "@emotion/babel-preset-css-prop",
           {
-            "autoLabel": true,
-            "hoist": true,
-            "sourceMap": true
+            "autoLabel": false,
+            "labelFormat": "[filename]--[local]"
           }
         ]
-      ],
-      "presets": [["env", { "loose": true }], "react", "stage-3"]
+      ]
     },
     "es": {
       "plugins": [
         "transform-class-properties",
         "lodash",
-        "transform-object-rest-spread",
-        [
-          "emotion",
-          {
-            "autoLabel": true,
-            "hoist": true,
-            "sourceMap": true
-          }
-        ]
+        "transform-object-rest-spread"
       ],
       "presets": [
         ["env", { "loose": true, "modules": false }],
         "react",
-        "stage-3"
+        "stage-3",
+        [
+          "@emotion/babel-preset-css-prop",
+          {
+            "autoLabel": false,
+            "labelFormat": "[filename]--[local]"
+          }
+        ]
       ]
     },
     "test": {
       "plugins": [
         "transform-class-properties",
         "lodash",
-        "transform-object-rest-spread",
+        "transform-object-rest-spread"
+      ],
+      "presets": [
+        "env",
+        "react",
+        "stage-3",
         [
-          "emotion",
+          "@emotion/babel-preset-css-prop",
           {
-            "autoLabel": true,
-            "hoist": true,
-            "sourceMap": true
+            "autoLabel": false
           }
         ]
-      ],
-      "presets": ["env", "react", "stage-3"]
+      ]
     },
     "static": {
       "plugins": [
         [
-          "emotion",
+          "@emotion/babel-preset-css-prop",
           {
             "autoLabel": false,
-            "hoist": false,
             "sourceMap": false
           }
         ],
