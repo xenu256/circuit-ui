@@ -133,6 +133,7 @@ export { default as ProgressBar } from './components/ProgressBar';
 export { default as Tag } from './components/Tag';
 export { default as Popover } from './components/Popover';
 export { default as Tooltip } from './components/Tooltip';
+export { default as GlobalStyles } from './components/GlobalStyles';
 export {
   default as Modal,
   DEFAULT_APP_ELEMENT,
@@ -168,8 +169,4 @@ const theme = {
 
 export { theme };
 
-export {
-  globalStyles as injectGlobalStyles,
-  styleHelpers,
-  constants as styleConstants
-} from './styles';
+export { styleHelpers, constants as styleConstants } from './styles';
