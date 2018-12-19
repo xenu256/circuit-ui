@@ -56,28 +56,5 @@
         ]
       ]
     },
-    "static": {
-      "plugins": [
-        [
-          "@emotion/babel-preset-css-prop",
-          {
-            "autoLabel": false,
-            "sourceMap": false
-          }
-        ],
-        "dynamic-import-node",
-        [
-          "module-resolver",
-          {
-            "root": ".",
-            "alias": {
-              "react-emotion": "./build/stylesheet/lib/custom-styled",
-              "^.+svg$": "./build/stylesheet/SvgMock"
-            },
-            "extensions": [".svg", ".js"]
-          }
-        ]
-      ]
-    }
   }
 }
