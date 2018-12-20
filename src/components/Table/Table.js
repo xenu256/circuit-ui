@@ -25,20 +25,24 @@ const responsiveStyles = ({ theme, rowHeaders }) =>
   rowHeaders &&
   css`
     label: table--responsive;
-    ${theme.mq.untilMega`
+    ${theme.mq.untilMega} {
       margin-left: -145px;
       width: calc(100% + 145px);
 
       &:after {
         content: '';
-        background-image: linear-gradient(90deg,rgba(0,0,0,.12),transparent);
+        background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.12),
+          transparent
+        );
         height: 100%;
         left: 145px;
         position: absolute;
         top: 0;
         width: 6px;
       }
-    `};
+    }
   `;
 
 const borderCollapsedStyles = ({ borderCollapsed }) =>
@@ -58,10 +62,10 @@ const containerStyles = ({ theme, rowHeaders }) =>
   css`
     label: table-container;
     border-radius: ${theme.borderRadius.mega};
-    ${theme.mq.untilMega`
+    ${theme.mq.untilMega} {
       margin-left: 145px;
       overflow-x: auto;
-    `};
+    }
   `;
 
 const noShadowStyles = ({ noShadow }) =>
@@ -88,7 +92,9 @@ class Table extends Component {
   };
 
   onSortEnter = i => this.setState({ sortHover: i });
+
   onSortLeave = () => this.setState({ sortHover: null });
+
   onSortBy = i => {
     const { sortedRow, sortDirection } = this.state;
     const isActive = i === sortedRow;
