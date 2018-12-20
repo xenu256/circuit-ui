@@ -2,14 +2,12 @@
   "env": {
     "cjs": {
       "plugins": [
-        "transform-class-properties",
+        "@babel/plugin-proposal-class-properties",
         "lodash",
-        "transform-object-rest-spread"
       ],
       "presets": [
-        ["env", { "loose": true }],
-        "react",
-        "stage-3",
+        ["@babel/preset-env", { "loose": true }],
+        "@babel/preset-react",
         [
           "@emotion/babel-preset-css-prop",
           {
@@ -21,14 +19,12 @@
     },
     "es": {
       "plugins": [
-        "transform-class-properties",
+        "@babel/plugin-proposal-class-properties",
         "lodash",
-        "transform-object-rest-spread"
       ],
       "presets": [
-        ["env", { "loose": true, "modules": false }],
-        "react",
-        "stage-3",
+        ["@babel/preset-env", { "loose": true, "modules": false }],
+        "@babel/preset-react",
         [
           "@emotion/babel-preset-css-prop",
           {
@@ -40,14 +36,12 @@
     },
     "test": {
       "plugins": [
-        "transform-class-properties",
+        "@babel/plugin-proposal-class-properties",
         "lodash",
-        "transform-object-rest-spread"
       ],
       "presets": [
-        "env",
-        "react",
-        "stage-3",
+        "@babel/preset-env",
+        "@babel/preset-react",
         [
           "@emotion/babel-preset-css-prop",
           {
