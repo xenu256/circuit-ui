@@ -1,0 +1,52 @@
+---
+name: Tooltip
+route: /components/tooltip
+menu: Components
+---
+
+import { Playground } from 'docz'
+import { Fragment } from 'react';
+import Tooltip from '../../../src/components/Tooltip/Tooltip';
+import PropTable from '../../utils/PropTable';
+import TooltipContainer from '../../utils/TooltipContainer';
+
+# Badge
+
+<Playground wrapper={TooltipContainer}>
+  <Tooltip position={Tooltip.TOP} align={Tooltip.LEFT}>
+    I am a teeny, tiny tooltip.
+  </Tooltip>
+</Playground>
+
+## Props
+(Cannot be rendered because it's a styled component)
+
+## Best practices
+- Only use one badge at a time.
+
+## Usage guidelines
+
+- Use to indicate statuses of a process, for instance, "Pending payment" or
+  "Successful transaction".
+- Only use semantic badges in cases where their colors can be mapped to a
+  meaning.
+
+## Component variations
+
+### Semantic badges
+The badges come in a number of colors based on their semantic meaning.
+
+<Playground wrapper={TooltipContainer}>
+  <Tooltip position={Tooltip.TOP} align={Tooltip.LEFT}>
+    I am a teeny, tiny tooltip.
+  </Tooltip>
+</Playground>
+
+### Circular badges
+Badges that receive the `circle` prop can be used to indicate notifications.
+
+<Playground wrapper={TooltipContainer}>
+  <Tooltip position={Tooltip.TOP} align={Tooltip.LEFT}>
+    I am a teeny, tiny tooltip.
+  </Tooltip>
+</Playground>
