@@ -36,6 +36,7 @@
     "build:svg:es": "cd src && find . -name *.svg -print | xargs -I@ gcp --parents @ ../lib/es && cd ..",
     "clean:js": "rimraf lib",
     "deploy": "rm -rf ./dist && mkdir dist && yarn run docz:build && yarn build && cp ./src/CNAME ./dist/CNAME && gh-pages -d dist",
+    "release": "semantic-release",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
     "precommit": "lint-staged",
@@ -99,6 +100,7 @@
     "react-docgen-annotation-resolver": "^1.0.0",
     "react-svg-loader": "^2.1.0",
     "react-test-renderer": "^16.2.0",
+    "semantic-release": "^16.0.0-beta.17",
     "storybook-addon-smart-knobs": "^3.2.10",
     "style-loader": "^0.20.1",
     "webpack-merge": "^4.1.1"
