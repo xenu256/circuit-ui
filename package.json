@@ -10,6 +10,7 @@
     "README.md"
   ],
   "scripts": {
+    "commit": "git-cz",
     "fix": "yarn fix:eslint",
     "fix:eslint": "foundry run eslint --fix --quiet src/**/**/*.js",
     "test": "yarn test:lint-js && yarn test:unit",
@@ -37,8 +38,15 @@
     "coverage:upload": "codecov",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "precommit": "lint-staged",
     "prepublishOnly": "yarn build:js"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.js"
+    }
   },
   "repository": {
     "type": "git",
@@ -61,7 +69,7 @@
     "@storybook/addon-storysource": "^3.4.0",
     "@storybook/addons": "^3.4.0",
     "@storybook/react": "^3.4.0",
-    "@sumup/foundry": "^1.0.0",
+    "@sumup/foundry": "^1.0.3",
     "babel-cli": "^6.26.0",
     "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.5",
@@ -107,8 +115,11 @@
     "babel-plugin-emotion": "^9.2.6",
     "babel-plugin-inline-react-svg": "0.5.4",
     "babel-plugin-lodash": "^3.3.2",
+    "commitizen": "^3.0.5",
     "create-react-context": "^0.2.1",
     "css-loader": "^0.28.9",
+    "cz-customizable": "^5.3.0",
+    "cz-customizable-ghooks": "^1.5.0",
     "dom-helpers": "^3.3.1",
     "downshift": "^1.31.14",
     "emotion": "^9.2.6",
