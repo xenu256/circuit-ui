@@ -28,7 +28,7 @@
     "build:stylesheet": "mkdir -p dist && BABEL_ENV=static node build/stylesheet > dist/circuit-ui.css",
     "build:global-styles": "mkdir -p dist && BABEL_ENV=static ./build/global-styles > dist/circuit-ui-global.css",
     "build:copy-global-styles": "cp -f dist/circuit-ui-global.css .storybook",
-    "build:js": "yarn clean:js && yarn build:js:cjs && yarn build:js:es && yarn build:svg:cjs &&  yarn build:svg:es",
+    "build:js": "yarn clean:js && yarn build:js:cjs && yarn build:js:es",
     "build:js:cjs": "cross-env BABEL_ENV=cjs babel src --out-dir lib --ignore *.spec.js,*.story.js",
     "build:js:es": "cross-env BABEL_ENV=es babel src --out-dir lib/es --ignore *.spec.js,*.story.js",
     "clean:js": "rimraf lib",
